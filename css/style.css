@@ -1,0 +1,184 @@
+@font-face {/* Headings/Titles Font */
+    font-family:BarlowCondensed-Regular;
+    src: url("../fonts/BarlowCondensed-SemiBold.ttf") format("truetype");
+}
+
+@font-face { /* Body Font  */
+    font-family:Montserrat-Regular;
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+:root{
+	--orange:#e6823e; /* Orange Color in Logo */
+	--blue:#0082a5; /* Light Blue in Logo */ 
+	--blueRGBA:rgba(0, 130, 165, .5); /* Same shade of light blue but with 50% opacity in RGBA */
+	--blueBG:#085177; /*  Background Blue, Dark  */
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family:BarlowCondensed-Regular;
+	/* CSS Reset  */
+	padding:0;
+	margin:0;
+}
+	h1{
+		font-size:1.5em;
+	}
+
+body{
+/* 	CSS Reset */
+	padding:0;
+	margin:0;
+}
+
+p,a,input,textarea,button{
+	font-family:Montserrat-Regular;
+}
+
+	button:hover{cursor:pointer;}
+
+	a:hover{
+		color:var(--blue);
+	}
+	a:focus{
+		color:var(--blue);
+	}
+
+header  a{
+	color:white;
+}
+	header  a:visited{
+		color:white;
+	}
+	
+nav{
+	display:grid;
+	grid-template-columns:auto;
+	align-items: center;
+	justify-items: center; 
+	background-color:white;
+	height:3rem;
+}
+	#navLogo{
+		height:auto;
+		width:12rem;
+	}
+
+header{
+	width:100%;
+	min-height:8rem;
+	color:white;
+	background-color:var(--blueBG);
+}
+	header > section {
+		padding:1rem;
+	}
+	
+	header h1{text-align:center;}
+	
+	.headerGrid{
+		display:grid;
+		justify-items: center; 
+	}
+		.headerAside{
+			display:grid;
+			grid-template-columns:auto;
+			justify-items: center;
+			row-gap:1rem;
+		}
+		
+	
+	@media only screen and (min-width: 1044px) {/*CSS for screen size at or Above 1044px*/
+		
+		.headerGrid{
+			grid-template-columns:25% 45% 25%;
+			column-gap:2.5%;
+		}
+		
+		.newsletter{grid-column: 2 /span 1;}
+		
+	}
+		
+	@media only screen and (max-width: 1044px) {/*CSS for screen size BELOW 1044px*/
+		
+		.headerGrid{
+			grid-template-columns:100%;
+		}
+		
+
+		.newsletter{
+			grid-column: 1 /span 1;
+			grid-row:1/span 3;
+		}
+		
+		.headerAside{padding-top:1em;}
+		
+	}
+	
+	.infoCard{
+		background-color:var(--blue);
+		border-radius:0.4rem;
+		height:10rem;
+		width:100%;
+		padding:0.4rem;
+		text-shadow:0 2px 2px black;
+		background-position:center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		box-shadow: 0 100vh var(--blueRGBA) inset;
+	}
+	
+	.alcoholRehab{
+		background-image:url("../images/alcohol1.webp");
+	}
+	
+	.opiodHelp{
+		background-image:url("../images/pills1.webp");
+	}
+	
+	.alcocholHelp{
+			background-image:url("../images/whiskey0.webp");
+		}
+		
+	.addictionCenter{
+			background-image:url("../images/drBhatt.webp");
+		}
+		
+	.rehabSpot{
+		background-image:url("../images/rehab1.webp");
+	}
+	
+	.advertise{
+		background-image:url("../images/laptopBannerImg.webp");
+	}
+	
+	.newsletterForm{
+		display:grid;
+		grid-template-columns:auto;
+		row-gap:0.5rem;
+	}
+		.newsletterForm  input{
+			border:0.2rem solid var(--blue);
+			height:2rem;
+			padding:0.2rem;
+			font-weight:bold;
+			border-radius:0.4rem;
+		}
+		
+		.newsletterForm button{
+			width:7rem;
+			background-color:white;
+			border:0.2rem solid var(--blue);
+			border-radius:0.4rem;
+			padding:0.5rem;
+			font-weight:bold;
+		}
+		
+	.errorBox{
+		margin-top:1rem;
+		border:0.2rem solid red;
+		max-width:90%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
